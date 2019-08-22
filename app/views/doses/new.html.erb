@@ -1,0 +1,10 @@
+<h1>Add the dose to Cocktail <%= @cocktail.name %></h1>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.association :ingredient %>
+
+  <%= f.label :dose %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
